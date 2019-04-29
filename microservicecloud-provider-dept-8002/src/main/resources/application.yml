@@ -1,0 +1,33 @@
+server:
+  port: 8002
+
+mybatis:
+  config-location: classpath:mybatis/mybatis.cfg.xml                # mybatis主配置文件所在路径
+  type-aliases-package: org.hut.pojo                                # 所有Entity别名类所在包
+  mapper-locations:
+  - classpath:mybatis/mapper/**/*.xml                               # mapper映射文件
+  
+spring:
+  application:
+    name: MICROSERVICECLOUD-DEPT                                    #必须要，对外暴露的服务的名字
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource                    # 当前数据源操作类型
+    url: jdbc:mysql://localhost:3306/clouddb02
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: root
+    
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka7001:7001/eureka,http://eureka7002:7002/eureka,http://eureka7003:7003/eureka
+  instance:
+    instance-id: dept_8002
+    prefer-ip-address: true
+    
+logging:
+  pattern:
+    console: '[%thread] %-5level %logger{50} - %msg%n'
+      
+      
+      

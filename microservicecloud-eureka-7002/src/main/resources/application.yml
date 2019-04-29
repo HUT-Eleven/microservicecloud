@@ -1,0 +1,17 @@
+server:
+  port: 7002
+  
+eureka: 
+  instance: 
+#    prefer-ip-address: true
+    hostname: eureka7002
+#    instance-id: localhost:7002
+
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      defaultZone: http://eureka7001:7001/eureka,http://eureka7003:7003/eureka
+logging:
+  pattern:
+    console: '[%thread] %-5level %logger{50} - %msg%n'
