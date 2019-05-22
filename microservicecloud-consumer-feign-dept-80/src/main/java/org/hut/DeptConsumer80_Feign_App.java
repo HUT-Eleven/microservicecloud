@@ -8,6 +8,7 @@ import org.springframework.cloud.netflix.feign.EnableFeignClients;
 @SpringBootApplication
 @EnableEurekaClient
 @EnableFeignClients
+//@EnableHystrix
 public class DeptConsumer80_Feign_App {
 
 	public static void main(String[] args) throws Exception {

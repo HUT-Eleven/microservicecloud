@@ -7,7 +7,7 @@ import org.springframework.cloud.netflix.feign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
-@FeignClient(value="http://MICROSERVICECLOUD-DEPT")
+@FeignClient(value="http://MICROSERVICECLOUD-DEPT",fallback=DeptClientServiceFallbackFactory.class)
 public interface DeptClientService {
 
 	@GetMapping(value="/dept/{id}")

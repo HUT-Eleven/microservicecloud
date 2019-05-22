@@ -9,7 +9,7 @@ mybatis:
   
 spring:
   application:
-    name: MICROSERVICECLOUD-DEPT                                   #必须要，对外暴露的服务的名字
+    name: MICROSERVICECLOUD-DEPT                                    #必须要，对外暴露的服务的名字
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource                    # 当前数据源操作类型
     url: jdbc:mysql://localhost:3306/clouddb01

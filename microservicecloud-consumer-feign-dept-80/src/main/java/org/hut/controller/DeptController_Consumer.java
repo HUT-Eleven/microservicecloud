@@ -17,11 +17,13 @@ public class DeptController_Consumer {
 	
 	@GetMapping(value="/consumer/dept/{id}")
 	public Dept get(@PathVariable("id")Long id) {
+		System.out.println("Feign Consumer dept/id Controller------");
 		return deptClientService.get(id);
 	}
 	
 	@GetMapping("/consumer/depts")
 	public List<Dept> list(){
+		System.out.println("Feign Consumer depts Controller------");
 		return deptClientService.list();
 	}
 	
