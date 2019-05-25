@@ -1,0 +1,7 @@
+spring:
+  cloud:
+    config:
+      name: config-eureka-server      #访问Github上的哪个文件
+      profile: dev
+      label: master
+      uri: http://config-3344:3344
