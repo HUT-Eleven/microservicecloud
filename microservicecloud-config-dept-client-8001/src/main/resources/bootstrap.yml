@@ -1,0 +1,7 @@
+spring:
+  cloud:
+    config:
+      name: config-dept-client
+      profile: test
+      label: master
+      uri: http://config-3344:3344
