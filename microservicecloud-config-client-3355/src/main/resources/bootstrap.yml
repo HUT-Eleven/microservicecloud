@@ -1,0 +1,13 @@
+spring:
+  cloud:
+    config:
+      name: config-client      #需要从github上读取的文件名称，注意没有yml后缀名
+#      profile: dev             #本次访问的配置项-dev
+      profile: test             #本次访问的配置项-test
+      label: master            #分支名
+      uri: http://config-3344:3344    #config-server的地址
+      
+eureka: 
+  client: 
+    service-url: 
+      defaultZone: http://eureka-dev:7001/eureka/
